@@ -14,7 +14,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/styles.css?v=20260621c" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=20260621d" />
 </head>
 
 <body>
@@ -220,59 +220,89 @@
       </section>
 
       <section id="alur" class="section journey-section">
-        <div class="container journey-inner">
+        <svg class="journey-curve" viewBox="0 0 760 520" aria-hidden="true">
+          <path d="M-20 188C116 132 232 132 344 188C478 255 598 244 780 130" />
+          <path d="M-36 320C148 238 306 256 456 340C576 407 672 410 792 360" />
+        </svg>
+
+        <div class="journey-inner">
           <div class="journey-head" data-reveal>
-            <p class="core-eyebrow">Product Flow</p>
-            <h2>Fitur Lengkap Dalam <span>Satu Ekosistem.</span></h2>
-            <p>
-              Dari onboarding sampai penukaran reward, ReWorth dibuat sebagai perjalanan sederhana
-              yang mudah dipahami pengguna baru.
-            </p>
+            <p class="journey-badge">Fitur ReWorth</p>
+            <h2>Fitur Lengkap Dalam<br /><span>Satu</span> Ekosistem.</h2>
+            <p>Semua yang dibutuhkan untuk melapor, mengelola aksi, dan mendapatkan manfaat.</p>
           </div>
 
-          <div class="journey-grid" aria-label="Alur penggunaan aplikasi ReWorth">
-            <article class="journey-card journey-card--dark" data-reveal style="--delay: 0ms;">
-              <div class="journey-copy">
-                <span>01</span>
-                <h3>Mulai Dari Onboarding</h3>
-                <p>Pengguna langsung paham misi ReWorth sejak layar pertama.</p>
+          <div class="journey-showcase" aria-label="Fitur ReWorth">
+            <article class="journey-feature" data-reveal style="--delay: 0ms;">
+              <div class="journey-popup">
+                <h3>Onboarding</h3>
+                <p>Mulai memahami misi ReWorth sejak layar pertama.</p>
+                <ul>
+                  <li>Kenali misi</li>
+                  <li>Mulai cepat</li>
+                  <li>Siap beraksi</li>
+                </ul>
               </div>
-              <figure class="journey-phone journey-phone--welcome">
+              <span class="journey-number">01</span>
+              <figure class="journey-mockup">
                 <img src="./assets/images/welcome%20page.jpeg" alt="Layar onboarding ReWorth" />
               </figure>
+              <h3>Mulai dari <span>Onboarding</span></h3>
+              <p>Pengguna langsung paham misi ReWorth sejak layar pertama.</p>
             </article>
 
-            <article class="journey-card" data-reveal style="--delay: 100ms;">
-              <div class="journey-copy">
-                <span>02</span>
+            <article class="journey-feature" data-reveal style="--delay: 120ms;">
+              <div class="journey-popup">
                 <h3>Pilih Aksi Harian</h3>
-                <p>Home menjadi pusat aksi untuk lapor sampah, tukar poin, dan belanja.</p>
+                <p>Semua aksi utama tersedia dalam satu beranda.</p>
+                <ul>
+                  <li>Lapor sampah</li>
+                  <li>Tukar poin</li>
+                  <li>Belanja produk</li>
+                </ul>
               </div>
-              <figure class="journey-phone">
+              <span class="journey-number">02</span>
+              <figure class="journey-mockup">
                 <img src="./assets/images/home.jpeg" alt="Beranda aplikasi ReWorth" />
               </figure>
+              <h3>Pilih Aksi <span>Harian</span></h3>
+              <p>Home menjadi pusat aksi untuk lapor sampah, tukar poin, dan belanja.</p>
             </article>
 
-            <article class="journey-card" data-reveal style="--delay: 200ms;">
-              <div class="journey-copy">
-                <span>03</span>
+            <article class="journey-feature" data-reveal style="--delay: 240ms;">
+              <div class="journey-popup">
                 <h3>Tandai Lokasi</h3>
-                <p>Pengguna menandai titik sampah agar laporan lebih jelas dan siap diproses.</p>
+                <p>Bantu lingkungan jadi lebih bersih dengan data laporan yang akurat.</p>
+                <ul>
+                  <li>Peta interaktif</li>
+                  <li>Foto & deskripsi</li>
+                  <li>Validasi cepat</li>
+                </ul>
               </div>
-              <figure class="journey-phone">
+              <span class="journey-number">03</span>
+              <figure class="journey-mockup">
                 <img src="./assets/images/lokasi.jpeg" alt="Fitur lokasi laporan sampah" />
               </figure>
+              <h3>Tandai <span>Lokasi</span></h3>
+              <p>Pengguna menandai titik sampah agar laporan lebih jelas dan siap diproses.</p>
             </article>
 
-            <article class="journey-card journey-card--reward" data-reveal style="--delay: 300ms;">
-              <div class="journey-copy">
-                <span>04</span>
+            <article class="journey-feature" data-reveal style="--delay: 360ms;">
+              <div class="journey-popup">
                 <h3>Tukar Jadi Manfaat</h3>
-                <p>Poin bisa diarahkan ke reward, kuota, voucher, atau produk daur ulang.</p>
+                <p>Poin aksi bisa diarahkan ke manfaat yang terasa.</p>
+                <ul>
+                  <li>Tukar reward</li>
+                  <li>Dukung seller</li>
+                  <li>Produk daur ulang</li>
+                </ul>
               </div>
-              <figure class="journey-phone">
+              <span class="journey-number">04</span>
+              <figure class="journey-mockup">
                 <img src="./assets/images/tukar_poin.jpg" alt="Fitur penukaran poin ReWorth" />
               </figure>
+              <h3>Tukar Jadi <span>Manfaat</span></h3>
+              <p>Poin bisa diarahkan ke reward, kuota, voucher, atau produk daur ulang.</p>
             </article>
           </div>
         </div>
@@ -479,7 +509,7 @@
     </footer>
   </div>
 
-  <script src="./assets/js/main.js?v=20260621c"></script>
+  <script src="./assets/js/main.js?v=20260621d"></script>
 </body>
 
 </html>
