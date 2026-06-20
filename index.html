@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ReWorth - Reward Your Action</title>
+  <title>ReWorth - Sampah Bernilai, Hidup Lebih Baik</title>
   <meta name="description"
     content="ReWorth membantu pengguna melaporkan sampah, mengumpulkan poin, dan menukarkannya menjadi manfaat yang dekat dengan kehidupan sehari-hari." />
   <meta name="theme-color" content="#173D18" />
@@ -12,9 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/styles.css?v=20260614h" />
+  <link rel="stylesheet" href="./assets/css/styles.css?v=20260621c" />
 </head>
 
 <body>
@@ -25,7 +25,13 @@
           <img class="brand-logo" src="./assets/images/logo_reworth.png" alt="ReWorth" />
         </a>
 
-        <nav class="site-nav" aria-label="Navigasi utama">
+        <button class="nav-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Navigasi utama">
           <a href="#tentang">Tentang</a>
           <a href="#fitur">Fitur</a>
           <a href="#alur">Alur</a>
@@ -41,27 +47,18 @@
 
         <div class="container hero-inner">
           <div class="hero-copy" data-reveal>
-            <p class="hero-kicker">
-              <span aria-hidden="true"></span>
-              Reward Your Action
-            </p>
             <h1>
-              Ubah <br class="mobile-only" />Sampah <b class="mobile-line">Liar</b><br />
-              Jadi <span>Reward</span><br class="mobile-only" /> &amp;<br />
-              Manfaat Yang<br class="mobile-only" /> Lebih Nyata.
+              Cara Baru Mengubah<br />
+              Sampah Jadi Lebih <span>Bernilai.</span>
             </h1>
-            <p class="hero-sub">
-              Laporkan sampah, kumpulkan poin, dan tukarkan menjadi manfaat yang lebih dekat
-              dengan kehidupan sehari-hari.
-            </p>
           </div>
 
           <div class="phone-stage" data-reveal style="--delay: 120ms;">
             <svg class="connection-lines" viewBox="0 0 1240 430" aria-hidden="true">
-              <path d="M354 124C430 118 480 128 540 170" />
-              <path d="M884 126C806 118 758 130 700 170" />
-              <path d="M348 282C432 276 486 260 544 224" />
-              <path d="M890 282C812 276 756 260 696 224" />
+              <path d="M330 118C456 128 466 204 548 214" />
+              <path d="M330 312C456 302 466 242 548 230" />
+              <path d="M910 118C784 128 774 204 692 214" />
+              <path d="M910 312C784 302 774 242 692 230" />
             </svg>
 
             <article class="feature-float feature-float-one">
@@ -86,11 +83,7 @@
             </article>
 
             <div class="phone-wrap">
-              <div class="phone-device">
-                <div class="phone-screen">
-                  <img src="./assets/images/home.jpeg" alt="Tampilan beranda aplikasi ReWorth" />
-                </div>
-              </div>
+              <img src="./assets/images/hero-mockup.png" alt="Tampilan aplikasi ReWorth" />
             </div>
 
             <article class="feature-float feature-float-three">
@@ -119,36 +112,51 @@
       <section id="tentang" class="section problem-section">
         <div class="container problem-layout">
           <div class="problem-copy" data-reveal>
-            <p class="problem-label">Problem</p>
-            <h2>Masalah<br />Sampah<br /><span>Masih</span> Terjadi.</h2>
+            <h2>Masalah Sampah Masih Terjadi.</h2>
             <p class="problem-lead">
               Sampah terus bertambah, sementara pengelolaan dan keterlibatan masyarakat belum
               bergerak secepat itu.
             </p>
-            <figure class="problem-photo">
-              <img src="./assets/images/problem-waste-jakarta.jpg" alt="Kondisi timbunan sampah di area terbuka" />
-              <figcaption>Masalah nyata yang butuh aksi kecil, cepat, dan berulang.</figcaption>
-            </figure>
-            <svg class="problem-arrow" viewBox="0 0 520 190" aria-hidden="true">
-              <path d="M0 172H214C314 172 360 132 410 72C432 46 461 26 500 18" />
-              <path d="M478 0L503 17L486 43" />
-            </svg>
           </div>
 
           <div class="problem-metrics" aria-label="Data masalah sampah">
             <article class="problem-metric" data-reveal style="--delay: 80ms;">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M6 8H18L17 20H7L6 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M9 8V6.5A3 3 0 0 1 15 6.5V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
               <div class="problem-number"><strong>267</strong><span>Ribu Ton</span></div>
               <h3>Timbulan Sampah / Tahun</h3>
               <p>Volume sampah terus meningkat dan belum seluruhnya dimanfaatkan kembali.</p>
             </article>
 
             <article class="problem-metric" data-reveal style="--delay: 160ms;">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 19V5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M8 19V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M12 19V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M16 19V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M20 19V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
               <div class="problem-number"><strong>39</strong><span>%</span></div>
               <h3>Pengelolaan Belum Optimal</h3>
               <p>Capaian pengelolaan nasional masih berada di bawah target.</p>
             </article>
 
             <article class="problem-metric" data-reveal style="--delay: 240ms;">
+              <span class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M7 7V20H17V7" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M9 4H15L16 7H8L9 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                  <path d="M10 11V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                  <path d="M14 11V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </span>
               <div class="problem-number"><strong>50,8</strong><span>%</span></div>
               <h3>Belum Terbiasa Memilah</h3>
               <p>Sebagian rumah tangga masih belum memilah sampah dari rumah.</p>
@@ -159,47 +167,54 @@
         </div>
       </section>
 
-      <section id="fitur" class="section core-section">
-        <div class="core-inner">
-          <div class="core-head" data-reveal>
-            <p class="core-eyebrow">ReWorth Experience</p>
-            <h2>
-              <span>Mulai Dari Satu Aksi</span>
-              <span>Lihat Dampaknya <em>Berkembang.</em></span>
-            </h2>
-            <p>Arahkan kursor untuk melihat fiturnya</p>
+      <section id="fitur" class="section solution-section">
+        <svg class="solution-curve" viewBox="0 0 900 900" aria-hidden="true">
+          <path d="M692 -28C584 150 520 302 552 456C594 657 784 754 880 862" />
+          <path d="M184 820C334 684 486 626 640 660C758 686 830 752 900 838" />
+        </svg>
+
+        <div class="solution-dots" aria-hidden="true"></div>
+
+        <div class="solution-inner">
+          <div class="solution-copy" data-reveal>
+            <p class="solution-label">Solusi</p>
+            <h2>ReWorth adalah<br /><span>Solusinya.</span></h2>
+            <p class="solution-desc">
+              Platform yang membantu mengubah aksi peduli lingkungan menjadi dampak nyata dan manfaat yang bisa dirasakan.
+            </p>
+
+            <div class="solution-timeline" aria-label="Langkah solusi ReWorth">
+              <article class="solution-step" data-reveal style="--delay: 80ms;">
+                <span>1</span>
+                <div>
+                  <h3>Buat Akun</h3>
+                  <p>Daftar dan mulai perjalanan peduli lingkungan dengan mudah.</p>
+                </div>
+              </article>
+
+              <article class="solution-step" data-reveal style="--delay: 160ms;">
+                <span>2</span>
+                <div>
+                  <h3>Laporkan Sampah</h3>
+                  <p>Laporkan titik sampah dan bantu lingkungan sekitar.</p>
+                </div>
+              </article>
+
+              <article class="solution-step" data-reveal style="--delay: 240ms;">
+                <span>3</span>
+                <div>
+                  <h3>Dapatkan Manfaat</h3>
+                  <p>Setiap aksi memberi poin dan bisa ditukarkan.</p>
+                </div>
+              </article>
+            </div>
+
+            <a class="solution-cta" href="#hero">Mulai Sekarang</a>
           </div>
 
-          <div class="core-showcase" data-core-showcase>
-            <article class="core-phone core-phone--left" style="--delay: 0ms;" tabindex="0">
-              <div class="core-device">
-                <img src="./assets/images/mini_market.jpeg" alt="Tampilan Mini Market ReWorth" />
-              </div>
-              <div class="core-info">
-                <strong>Mini Market</strong>
-                <span>Belanja produk daur ulang</span>
-              </div>
-            </article>
-
-            <article class="core-phone core-phone--center" style="--delay: 120ms;" tabindex="0">
-              <div class="core-device">
-                <img src="./assets/images/lokasi.jpeg" alt="Tampilan lokasi laporan sampah ReWorth" />
-              </div>
-              <div class="core-info">
-                <strong>Lapor Sampah</strong>
-                <span>Tandai lokasi dan kumpulkan poin</span>
-              </div>
-            </article>
-
-            <article class="core-phone core-phone--right" style="--delay: 240ms;" tabindex="0">
-              <div class="core-device">
-                <img src="./assets/images/tukar_poin.jpg" alt="Tampilan penukaran poin ReWorth" />
-              </div>
-              <div class="core-info">
-                <strong>Tukar Reward</strong>
-                <span>Gunakan poin untuk manfaat harian</span>
-              </div>
-            </article>
+          <div class="solution-visual" data-reveal style="--delay: 120ms;">
+            <div class="solution-glow" aria-hidden="true"></div>
+            <img class="solution-mockup" src="./assets/images/mockup2.png" alt="Tampilan aplikasi ReWorth" />
           </div>
         </div>
       </section>
@@ -464,7 +479,7 @@
     </footer>
   </div>
 
-  <script src="./assets/js/main.js?v=20260614f"></script>
+  <script src="./assets/js/main.js?v=20260621c"></script>
 </body>
 
 </html>

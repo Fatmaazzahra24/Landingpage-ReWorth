@@ -3,6 +3,8 @@ const revealItems = document.querySelectorAll("[data-reveal]");
 const siteHeader = document.querySelector(".site-header");
 const heroSection = document.querySelector(".hero");
 const corePhones = document.querySelectorAll(".core-phone");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelectorAll(".site-nav a");
 
 function setupReveal() {
   if (!("IntersectionObserver" in window) || reducedMotion) {
@@ -41,6 +43,36 @@ function setupHeader() {
   window.addEventListener("scroll", updateHeader, { passive: true });
 }
 
+function closeMobileNav() {
+  if (!siteHeader || !navToggle) {
+    return;
+  }
+
+  siteHeader.classList.remove("is-open");
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
+function setupMobileNav() {
+  if (!siteHeader || !navToggle) {
+    return;
+  }
+
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", closeMobileNav);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) {
+      closeMobileNav();
+    }
+  });
+}
+
 function setupCoreShowcase() {
   if (!corePhones.length) {
     return;
@@ -59,4 +91,5 @@ function setupCoreShowcase() {
 
 setupReveal();
 setupHeader();
+setupMobileNav();
 setupCoreShowcase();
